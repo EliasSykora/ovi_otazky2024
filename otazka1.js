@@ -30,3 +30,24 @@ if (cislo > 0) {
         console.log("Číslo je dvouciferné.")  
     }
  }
+
+ // SWITCH
+
+switch (jmeno) {
+    case "Jana" :
+        // něco se stane
+        break;
+    case "Anička" :
+            // něco se stane
+            break;
+    default:
+            // něco se stane
+ }
+
+ if(jmeno=="Jana") {
+      // něco se stane
+ } else if (jmeno=="Anička"){
+      // něco se stane
+ } else {
+      // něco se stane
+ }

@@ -25,5 +25,119 @@ podmínka (podmíněný příkaz)
 -> jednoduchá podmínka (neúplný podmíněný příkaz)
 
 if(podminka) {
-    
+
 }
+
+-> podmínka s alternativou (úplný podmíněný příkaz)
+
+
+if(podminka) {
+
+} else {
+
+}
+
+-> podmínka s více alternativami 
+
+if(podminka) {
+
+} else if(podminka) {
+
+} else {
+
+}
+
+-> vnořená podmínka
+
+if (podmínka) {
+    if (podmínka) {
+    
+    }
+}
+
+Použití podmínek:
+
+- dělení děje programu
+- hry
+- hesla
+- ověření věku
+- lokalizace (výběr jazyka)
+- optimalizace (mobilní nebo webová verze)
+
+Uvnitř podmínek porovnáváme dvě hodnoty
+
+porovnáváme proměnnou s hodnotou / proměnnou s jinou proměnnou
+
+OPERÁTORY V PODMÍNKÁCH
+- porovnávají hodnoty v proměnných
+
+== rovná se 
+=== rovná se (i s typem proměnné)
+!= nerovná se
+
+> větší než
+< menší než
+>= větší nebo rovno
+<= menší nebo rovno
+
+OPERÁTORY PRO PRÁCI S VĚMA A VÍCE PODMÍNKAMI
+
+&& a současně (pravý alt+c)
+|| nebo  (pravý alt+w)
+
+v JS:
+((podminka 1) && (podminka 2))
+
+v C# 
+(podminka 1 && podminka 2)
+
+
+přepínač = switch
+
+porovnává jen 1 proměnnou s konkrétními hodnotami (nemůže pracovat s rozsahy)
+
+switch (promenna) {
+    case "hodnota":
+        Co se má stát;
+        break;
+    case "hodnota":
+        Co se má stát;
+        break;
+    default:
+        Co se má stát pokud nic neplatí.
+        break;
+}
+
+
+cykly
+
+- umožňují dělat akci opakovaně
+- nemá omezení - omezuje ho jen kapacita programu
+- vykonává se před vykreslením grafiky
+- slouží k načtení obrázků, zvuků...
+k rozmístění objektů, dalším počátečním nastavení, ke generování objektů aj.
+
+For cyklus
+    - po dobu, kdy něco platí, se něco vykonává
+    - používá proměnnou vytvořenou jen pro tento cyklus
+
+    v JS:
+
+for (var i=0; i<10; i++) {
+    co se má vykonat
+}
+tento cyklus se vykoná 10x, na konci cyklu se vždy přičte +1, cyklus skončí pokud je i 10.
+
+While cyklus 
+- používá externí proměnnou
+- proměnná zůstává i po konci cyklu
+
+while ( podminka ) {
+
+}
+
+Příkazy pro podmínkách a cyklech
+
+break; - přeruší všechno od breaku po následující závorku, pokračuje za závorkou
+
+continue; - přeruší cyklus, pokračuje následujícím
