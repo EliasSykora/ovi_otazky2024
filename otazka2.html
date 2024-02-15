@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka2.js"></script>
+</head>
+<body>
+
+Funkce. (práce s parametry funkce, funkce s návratovou hodnotou, funkce set a get)
+
+Funkce
+    - část kódu = programový konstrukt, který obsahuje další příkazy, které umožňuje volat opakovaně a bez volání se kód přeskakuje
+    - můžeme volat názvem = jménem funkce
+
+    Jméno funkce
+        - neopakující se výraz = unikátní
+        - jedno slovo (bez mezer)
+        - nesmí začínat číslem
+        - nesmí obsahovat speciální znaky "",.:!? 
+        - může obsahovat - _
+
+    Deklarace funkce = vytvoření funkce
+
+    function jmenoFunkce() {
+         // vnitřní kód, který se přeskočí do volání funkce
+    }
+
+    Spouštění funkce
+        Přes volání:
+        jmenofunkce();
+        - spustí se tolikrát, kolikrát je napsané jméno
+
+        Pomocí posluchače:
+        - Připojí se posluchač na nějaký objekt (tlačítko, zvuk, video)
+        - Událost se odehraje uvnitř objektu, na kterém je posluchač
+
+        JS:
+        
+        Přidání posluchače:
+        button.addEventListener("click", jmenoFunkce);
+
+        Odebrání posluchače:
+        button.removeEventListener("click", jmenoFunkce);
+
+
+        Unity C#:
+        - posluchač se spojil s konkrétní funkcí např. onCollisionEnter, onTriggerEnter 
+        - naši další funkci bychom tam museli napsat jménem
+        - přidání posluchače - např. přes přidání komponenty Collider
+        - odebrání posluchače - zrušením collideru
+
+        void Update()
+        {
+            Run();
+            FlipSprite();
+        }
+
+
+        Metody = předpřipravené funkce
+            - uložené uvnitř prohlížeče (JS)
+            - připravené v komponentách  ( Unity)
+            - uložené v knihovnách (Animate, JQuery)
+
+            - většina programovacích jazyků má vlastní Metody
+            - najdeme je v referencích jazyka:
+
+            Javascript:
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+            https://www.w3schools.com/jsrEF/default.asp
+
+            JQuery:
+            https://api.jquery.com/
+
+            Unity C#:
+            https://docs.unity3d.com/530/Documentation/ScriptReference/index.html
+            https://www.w3schools.com/cs/index.php
+
+    Funkce:
+    - funkce bez parametru
+    - funkce s parametrem
+    - funkce s dvěma a více parametry
+
+    Parametr se píše do závorek za jménem funkce
+    - píšeme tam proměnnou 
+    - využívá datový vstup - používá je uvnitř funkce
+
+    Funkce bez parametru:
+    - nemá nic v závorkách
+    - nemůžeme používat posluchače -> můžeme je spouštět jen napsáním názvu
+
+    Příklady:
+        Window.close();
+        movieclip.play();
+        Start();
+        Update();
+
+    Funkce s parametrem:
+    - do závorek se píše proměnná
+    -> v JS nemusíme uvádět typ
+    -> v C# ano
+    - po zavolání funkce dosadíme hodnotu na místo proměnné
+    - mohou používat posluchače myši, kláves apod.
+
+    function pohyb (kolik) {
+        objekt.x += kolik; 
+    }
+
+    pohyb(200px);
+
+    -> volání různých objektů:
+
+    function zmiz (object) {
+        object.alpha = 0;
+    }
+
+    zmiz(postava1);
+    zmiz(tlacitko);
+
+    Funkce s více parametry:
+    -> mezi parametry píšeme čárku
+
+    function skocAOtoc (uhel, vzdalenost) {
+        objekt1.rotation += uhel;
+        objek1.x += vzdalenost;
+    }
+    
+    -> posluchače událostí
+    myši:
+
+    function klikni(e){
+        e.target = cíl události
+    }
+
+    e = parametr (pojmenované jako e = event)
+
+
+    Funkce set a get
+    - slouží k vytváření vlastností = properties ve třídách
+    - nejen že uloží hodnotu, ale může také něco vykonat (s tou hodnotou)
+    např. uloží novou výšku a současně transformuje objekt, 
+    odečte počet životů, zkontroluje jejich počet  a případně zabije hráč
+
+    v JS:
+    vytvoří se objekt s názvem student:
+    const student = {
+        jmeno: "Péťa";
+        vek: 28;
+    } 
+
+    Funkce get dokáže číst vlastnosti z objektu:
+
+    Object.defineProperty( student, "getName", {
+        get: function() {
+            return this.jmeno;
+        }
+    })
+
+    Použití:
+
+    student.jmeno;
+
+    Funkce set - nastaví jinou hodnotu vlastnosti:
+
+    Object.defineProperty( student, "changeName", {
+        set: function(value){
+            this.jmeno = value;
+        }
+    })
+
+    student.zmenJmeno = "Jiřík";
+
+
+
+
+    </body>

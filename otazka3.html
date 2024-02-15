@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+
+    Datové typy a přetypovávání. (základní a komplexní datové typy)
+
+    datové typy = programové konstruky uchovávající části dat podle vzoru
+    proměnná = místo v paměti počítače, které ukládá data určitého typu (= datové typy)
+
+    jednoduché datové typy
+        - jen 1 typ dat
+        - ukládají se do zásobníku (stack) - 1 přihrádka pro 1 kus dat
+        - "obálka" - můžeme smazat, přepsat, upravit matematicky apod.
+
+    komplexní datové typy
+        - ukládají se do haldy (heap)
+        - proměnná je jako "cesta"
+        - při změně měníme cesty ( data se nemažou, pokud je nesmaže "destuktor")
+
+
+    Základní datové typy:
+    jednoduché:
+        číselné:
+            JS: Number - všechna reálná čísla (7572.7727 ), všechna čísla, co jdou napsat číslicemi
+            JS, C#: Int (integer) - všechna celá čísla (bez desetinné čárky)
+            JS, C#: Uint (unsigned integer) - všechny celá kladná 
+            C#: Long - celá čísla s větším rozsahem
+            C#: Float - reálná čísla
+            C#: Double - reálná čísla s větším rozsahem
+
+        true / false:
+            JS: Boolean
+            C#: Bool
+
+    komplexní:
+        textové:
+            JS, C#: string - textový řetězec, odděluje se ""
+        objekty:
+            JS: object - nejzákladnější kontejner, dokáže obsahovat další data
+            C# - základní třída
+
+    Speciální hodnoty:
+        NaN - not a number - pokud se snažíme použít string jako number
+        undefined - proměnná existuje, ale prádná (nemá hodnotu)
+        null - nulová hodnota
+
+    Další datové typy:
+
+        Array - pole - může obsahovat další promněnné různých typů
+                pole = [ false, 7257, "text", Window ]
+                Můžeme se dívat do jednotlivých políček 
+                Můžeme ho zkracovat, prohazovat přihrádky apod.
+        movieclip
+        Button
+        RigidBody
+        Collider
+
+Indentifikátor proměnné = jméno proměnné
+    - pravidla pojmenování
+        - nesmí mít speciální znaky ( . , ! "" ? )
+        - může obsahovat - _
+        - jednoslovné
+        - unikátní
+        - rozlišuje velká a malá písmena
+        - nesmí začínat číslem
+    
+        v JS: vytváříme přes
+            var nazevPromenne
+
+Deklarace proměnné:
+Vytvoření prázdné proměnné:
+
+    JS:
+        var nazevPromenne;
+    C#:
+        typProměnné nazevPromenne;
+
+Vytvoření proměnné s obsahem
+
+JS:
+    var nazevPromenne = hodnota;
+C#:
+    typProměnné nazevPromenne = hodnota;
+    [SerializeField] typProměnné nazevPromenne;
+
+Do proměnné můžeme vkládat i další proměnnou:
+
+    var nazevPromenne = promenna2;
+    - vloží se aktuální stav promenne2, další změny se neaktualizují;
+
+Přetypování proměnných:
+
+v JS a C# se většinou děje automaticky.
+
+v JS:
+    číslo na text je:
+        cislo.toString();
+    text na číslo je:
+        text.valueOf();
+v C#:
+    Convert.ToBoolean(hodnota);
+    Convert.ToDouble(hodnota);
+    Convert.ToString(hodnota);
+
+Operátory pro práci s proměnnými
+
+    značky umožňující práci s proměnnými
+
+    Aritmetické operátory (matematické operace)
+    standartní operátory  + - / *
+    inkrementace ++ (+1)
+    dekrementace -- (-1)
+
+    Logické operátory (pracují s logickými výrazy - podmínky)
+    standartní operátory > < >= <=
+    rovná se  ==
+    nerovná se !=
+    negace !  (nesmí to být tato hodnota)
+    logický součet (nebo)  ||
+    logický součin (a současně)  &&
+
+
+    Použití proměnných:
+
+        Podmínky (porovnávání proměnných)
+        Ukládání dat
+        Nastavení a ovládání programu
+        Nastavování vlastností
+        Matematické výpočty
+        
+
+
+
+
+
+</body>
