@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    5: Stavový automat
+
+    = model popisující chování (programu, komponenty)
+    - slouží k návrhu chování programu (komponenty, webových stránek, interaktivity)
+    - přehled všech částí, animací, scén, 
+    - graficky zobrazuje chování - vždy ukazuje vstup do aplikace (start), může obsahovat i konec
+    - zjednodušuje práci na komplexních prvcích (ujasnění priority, kontrola odkud kam se můžeme přesouvat, co máme hotové)
+
+    Grafické zobrazení
+    - černé kolečko s šipkou ven - začátek, start spuštění aplikace
+
+    STAV = snímek / scéna, kde se děj programu zastaví 
+    čeká na:
+         - vstup uživatele (kliknutí, zmáčknutí klávesy)
+         - event - událost jiného objektu (dokončení animace)
+         - časovač - dokončí se časový limit nebo se spustí interval
+    statický Stav - vše stojí
+        v Animatu:   this.stop();
+    dynamický stav - loop, zacyklená animace, zacyklené děje
+        v Animatu:  this.gotoAndPlay(0); - vrací se skončení na začátek
+    Stavy zakreslujeme jako bubliny nebo ovály s názvem stavu uvnitř
+    Začátek míří do stavu
+
+    Přechody mezi Stavy
+        - mohou být animace (nebo bez animace)
+        - zobrazují se jako šipky mezi Stavy
+        - měli bychom je pojmenovávat jako puvodniStav_nasledujiciStav
+
+    V Animatu
+        - přechody byly animace
+        - na konci animace bylo "gotoAndStop" do následujícího stavu
+        - před koncem animace - událost DispatchEvent("Konec_stav1_stav2");
+    
+    V Unity 
+        - můžeme využívat stavový automat pro animace v Animatoru
+        - přechody určují podmínky přechodu ze stavu do stavu
+
+    události
+        - mohou být generované, nebo např. vstup uživatele
+        - zakreslujeme změnu běhu aplikace
+        - zakresluje se jako blesk s názvem události 
+
+Použití stavových automatů:
+    - Tvorba / navrhování aplikace
+            - mapa odkud kam můžeme jít (scény)
+            - navigace, UI
+    - navrhování jednotlivých prvků + animací
+            - tlačítka, postavy, předměty
+    - chování infografiky
+    - chování přístroje
+    - průchod hrou
+    - větvení děje
+    - chování postav
+
+Při navrhování webů jimi můžeme zaznamenat:
+    - hierarchii
+    - kdy musí dát uživatel souhlasy
+    - kdy se musí přihlásit
+    - správný průchod pro získání všech informací
+
+ 
+</body>

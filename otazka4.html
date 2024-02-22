@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+
+Třídy. (Definice třídy, dědičnost, statické třídy, dynamické třídy, konstruktor, atributy a metody třídy, modifikátory přístupu public a private)
+-------------------------
+
+Třída = vzor v objektovém programování
+ - uložená v knihovně
+ - můžeme z ní dělat kopie = instance
+
+ Abstraktní třída = nemůžeme dělat instance 
+ Statická třída = má jen jednu instanci (kurzor, scéna)
+ Dymaciká třída = má mnoho instancí a každá má svou verzi hodnot (pozici, velikost apod.)
+
+ Dědičnost
+ = základní prvek objektově orientovaného programování
+ můžeme vzít existující vzor a přidávat grafiku / funkce / události
+ rozšiřujeme již existující třídy
+ základní třída v JS i C# je Object
+
+ rodič (parent) = původní třída
+ potomek (child) = nová třída
+
+ statické proměnné = instance dynamické třídy sdílí jednu hodnotu proměnné (body, životy)
+ dynamické proměnné = každá instance dynamické třídy má svoje hodnoty (pozice, velikost...)
+
+ metody = předpřipravené funkce uvnitř třídy
+ atributy = vlastnosti třídy (pomocí set a get), uloží informace a mohou vykonat i další věci (visible, alpha, x, y...)
+
+ Modifikátory přístupu:
+týkají se proměnných a funkcí
+
+ public = veřejná - můžeme pustit zvenčí třídy (z jiné třídy, ze scény, z jiného projektu)
+ např. movieclip - play, stop, Console - log 
+ private = soukromá - spouštíme jen uvnitř třídy (zvenčí nejsou vidět)
+
+
+ this = označuje instanci třídy (která má v sobě tento kód)
+    - jen uvnitř třídy
+    - přidáváme posluchače, měníme proměnné
+    - v JS - this je relativní (na scéně znamená scénu, ve třídě znamená třídu, ve funkcí znamená funkci)
+    - v C# - this vždy znamená objekt, ne který je skript připojený
+
+Tvorba třídy v JS:
+
+class nazevTridy {
+
+    constructor(height, width) {
+        // co se má stát po spuštění
+        this.height = height;
+        this.width = width;
+    }
+
+}
+
+Tvorba třídy v Unity:
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+// importy z knihoven
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+Dědičnost Unity:
+
+Object 
+        -> Umí obsahovat další věci
+        -> Umí se spustit a odstranit
+        -> Má jméno
+    - Scriptable Object
+        -> Není závislý na GameObjectech (neexistuje na scéně)
+        -> umí vytvářet instance
+        -> zachytává události (OnValidate, OnEnable, OnDisable, Awake)
+        slouží k tvorbě dalších skriptovacích objektů, co nejsou závislé na scéně
+        např. texty pro dialogy, staty pro nepřátele
+        Uchovává data v proměnných co mu určíme
+    - Game Object
+        Objekty na scéně 
+        -> mají pozici v hierarchii
+        -> aktivace / deaktivace v hierarchii
+        -> mohou na sebe napojovat komponenty, 
+        -> najdou komponentu podle jména nebo tagu
+    - Component
+             Část programu, která se připojuje ke GameObjectu
+             -> najdou komponentu podle jména nebo tagu
+
+        - Behaviour
+                -> Může být enabled, pokud je, spouští se v něm funkce Update
+            - MonoBehaviour
+                Základní třída pro skripty v Unity    
+                -> přidává události 
+                -> má funkce Start(), Awake() a další pro naše skripty 
+            - Transform
+                Má každý objekt na scéně
+                -> pozice, rotace, velikost
+            - Collider
+                dektektor doteku objektů
+                -> uchovává si vnitřní hranice
+                -> detekuje překročení hranic
+                -> můžeme nastavit "trigger" - dotek nevytvoří zeď 
+
+
+
+
+
+
+</body>
