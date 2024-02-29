@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+6: Události v JS a C#. (přidávání a ubírání posluchačů událostí, target a current target)
+
+JS Reference: https://www.w3schools.com/js/js_events.asp
+C# Reference: https://docs.unity3d.com/2021.2/Documentation/Manual/UIE-Events-Reference.html
+
+Událost:
+    Programový konstrukt vysílající oznámení to spuštění úkonu
+    Tři fáze události:
+        - záchytávací  = capture phase
+        - cílová fáze = target phase
+        - probublávací  = bubble phase
+
+    Dva cíle událostí:
+        - target = nejnížší cíl události (cílová fáze)
+        - currentTarget = nejvyšší cíl události (capture phase)
+    
+    
+Události v JS:
+    Třída event 
+        vlastnosti:
+            target
+            currentTarget
+            type = typ události (MouseEvent, KeyboardEvent, TouchEvent, GestureEvent, UI Event, Animation Event)
+        můžeme je vyvolávat:
+            this.dispatchEvent("Název události");  = generování vlastní události
+            -> testování podmínek, nastavení dalších funkcí, přenesení informací
+
+    Události typu Event:
+        příklady: 
+            change
+            ended
+            submit
+        
+    Události typu MouseEvent:
+        - umí vše, co třída typu Event
+        vlastnosti:
+            buttons - které tlačítko bylo zmáčknuté
+            pageX, pageX - pozice myši na stránce
+            altKey, ctrlKey, shiftKey - jsou držené tyto klávesy?
+        příklady:
+            mousedown
+            mouseup
+            click
+            dblclick
+            mouseenter - ignoruje vnitřní hranice objektu
+            mouseleave - ignoruje vnitřní hranice objektu
+            mouseover
+            mouseout
+            contextmenu
+        pokud událost přidáváme jako vlastnost objektu, píšeme před název "on"
+
+    Události kláves:
+    - umí vše, co třída typu Event
+    vlastnosti:
+        code
+        key
+        location
+        altKey, ctrlKey, shiftKey - jsou držené tyto klávesy?
+
+    příklady:
+        keydown - zmáčknutí klávesy
+        keyup - zvednutí klávesy
+        keypress (starší) - jen pro klávesy s písmenem
+
+    Události kláves spouští jakákoliv klávesa, která to byla zjišťujeme až přes
+        parametr např. code, key, location pomocí podmínek
+
+    Přidání a odebírání posluchačů:
+    - dáváme na objekt, který má být cílem události
+    - tam kde událost vzniká
+
+     1) vlastnost elementu
+      <button onclick="nazevFunkce()"></button>
+     2) ve scriptu
+        objekt.addEventListener("udalost", nazev funkce);
+
+        function nazevFunkce (e) {
+
+        }
+
+        objekt.removeEventListener("udalost", nazev funkce);
+
+Události v C# v Unity:
+    
+        Zachytáváme události myši a kláves díky Input Manageru
+            - zaznamenáváme vstupy na tzv. Axes (osách)
+            osy se mění podle daného zařízení - přičítání nebo odečítání hodnot
+            Můžeme využít hodnoty os ve skriptech
+
+            Input.GetAxis("Horizontal")  = přečte horizontální osu ovlivňovanou a, d, <- ->
+            Input.GetAxis("Vertical") = přečte vertikální osy w,s, nahoru, dolu
+
+        Další typy událostí vyvolávají samotné třídy
+        např. skrz komponenty, MonoBehaviour nebo kameru
+
+        Tyto události nemusíme vyvolávat, staří napsat funkci void s jejich názvem
+
+        void Update() {
+
+        }
+
+        void onCollisionEnter 2D(Collision2D other){
+
+        }
+
+K čemu slouží události:
+
+        Spouštění funkcí
+        Reakce na to, že uživatel něco udělal, něco skončilo, něco začalo
+        Vypnutí probíhajícího děje
+        Dodává interaktivitu aplikaci => Umožňuje vstupy uživatele
+
+</body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    7: Dynamika založená na čase. (Časová osa v Adobe Animate, setInterval, Update, Start, události časovače)
+
+    V Adobe Animate
+
+    fps - počet snímků za vteřinu 
+            24 minimálně (25 Evropa, 30 USA)
+            12 starší animace
+            I méně pro animované bannery, infografika
+
+    Ovládáme ji příkazy:
+    this.gotoAndPlay() - do závorek píšeme parametr - číslo snímku, název snímku
+    this.gotoAndStop() - do závorek píšeme parametr - číslo snímku, název snímku
+    this.play()
+    this.stop()
+
+    Časová osa uvnitř symbolů 
+        - v MovieClipech - synchronizovaná se scénou
+        - Buttony - jen 4 snímky (out, over, down, hit) - nepoužívá se k animaci
+        - v Grafice - časová osa synchronizovaná se scénou nebo 1 snímek - nedá se ovládat skripty
+
+    V JS:
+        Dva časové nástroje
+
+        setTimeout
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+            - časový limit = delay = v milisekundách
+            - spustí funkci po skončení časového limitu
+
+            setTimeout(funkce, delay)
+
+            - pro ovládání se musí uložit do proměnné
+
+            var stopky = setTimeout(nazevFunkce, 10000)
+
+            - zastavení Timeoutu
+
+            clearTimeout(stopky)
+
+        setInterval
+            - opakované tikání po určitém intervalu
+            - probíhá nekonečně dlouho, pokud nevytvoříme další skript
+
+            setInterval(funkce, delay)
+
+            - pro ovládání se musí uložit do proměnné:
+
+            var tikani = setInterval(funkce , 10000);
+
+            Pro zrušení použijeme
+            clearInterval(tikani)
+
+            var tikani = setInterval(tikej, 1000);
+            var pocetTikani = 0;
+
+            function tikej(){
+                if(pocetTikani>10) {
+                    clearInterval(tikej)
+                } else {
+                    co chceme aby funkce dělala
+                }
+                pocetTikani++;
+            }
+
+V C# v Unity
+
+Na práci s časem můžeme využít metodu MonoBehaviour
+
+Invoke - podobná setTimeoutu
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.Invoke.html
+
+- spustí funkci po časovém intervalu v sekundách
+
+public void Invoke(string methodName, float time); 
+
+InvokeRepeating - podobná setIntervalu
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.InvokeRepeating.html
+
+- spouští funkci opakovaně
+public void InvokeRepeating(string methodName, float time, float repeatRate); 
+
+funkce Start - spustí svůj obsah při načtení programu
+
+funkce Update - spouští se při každém vykresleném snímku
+
+
+Využití dynamiky času
+- Opakované spouštění funkce
+- Časový limit
+- Zpoždění děje
+- Tvorba animací 
+- Testování podmínek (počet životů, podmínka výhry)
+
+
+</body>
