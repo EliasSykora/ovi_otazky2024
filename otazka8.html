@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    8: Třída MovieClip, DisplayObject. (hierarchie tříd, dědičnost, kontejnery a práce s nimi);
+
+    JS: https://createjs.com/docs/easeljs/classes/MovieClip.html
+
+    Třída - vzory v programovacím jazyce, které mají vlastnosti a metody a jsou uložené v knihovně
+    Instance - kopie vytvořená z třídy
+    Dědičnost - tvorba nových vzorů (tříd) z existujících tříd -> nová třída umí všechno, co ta stará + něco navíc (další funkce, grafika, události apod.)
+
+
+    MovieClip
+    Třída z knihovny CreateJS: https://createjs.com/
+
+    https://code.createjs.com/1.0.0/createjs.min.js
+    Můžeme používat Adobe Animate (už v sobě má tuto knihovnu zabudovanou)
+    Nebo ji připojit do headu v html souboru
+
+    Tvorba Movieclipu:
+    V Adobe Animate:
+        > Vložit > Nový Symbol CTRL + f8
+        nebo
+        Nakreslit objekt na scéně > pravé tlačítko > Převést na symbol
+
+    Ve Skriptu:
+        Vytváříme jako proměnnou - bez grafiky: 
+
+        var nazev = new MovieClip();
+
+    Vlastnosti:
+        nové:
+            currentFrame - číslo aktuálního snímku
+            currentLabel - název aktuálního snímku
+            timeline - časová osa
+            totalFrames - celkový počet snímků
+            loop - zacyklení animace
+            paused - je zastavený?
+        zděděné:
+            alpha - průhlednost
+            cursor - kurzor myši nad objektem
+            mouseEnabled - povolené reakce myši
+            mouseChildren - povolené reakce myši na vnitřní objekty
+            name - název objektu (ID)
+            rotation
+            scaleX, scaleY
+            tickEnabled - event při vykreslení snímku
+            visible
+            x, y
+    
+    Metody: (funkce)
+        nové:
+            play()
+            stop()
+            gotoAndPlay()
+            gotoAndStop()
+            advance() - posun na další snímek
+        zděděné:
+            addEventListener()
+            removeEventListener()
+            hitTest() - dotek objektů
+            globalToLocal - přepis souřadnic při přesunu potomka ze scény do objektu
+            localToGlobal - přepis souřadnic při přesunu potomka z objektu do scény
+
+    Události:
+        nové: 
+            -
+        zděděné:
+            Události myši (click, dblclick, mouseover...)
+
+    Použití Movieclipu:
+        - animované objekty
+        - kontejnery pro dlaší animované objekty
+        - interaktivita
+
+
+    Dědičnost MovieClipu:
+
+        Object - základní třída 
+        - je z JS (ne z knihovny CreateJS)
+        - dokáže se spustit - má konstruktor
+        - dokáže obsahovat proměnné (uloží kus dat)
+        - může mít vlastnosti vytvořené pomocí funkcí set a get
+          > funkce vypadající jako proměnná > uloží data + vykonají činnost
+          jmeno.vlastnost = hodnota
+
+        EventDispatcher
+        - je z CreateJS
+        - generuje Události
+        - přidávání a odebírání posluchačů události
+        metody:
+            addEventListener()
+            removeEventListener()
+            dispatchEvent()
+
+        DisplayObject
+        - přidává možnost zobrazení na scéně
+        - abstraktní třída - nemůže mít instance, jen rozšiřuje kód
+        vlastnosti:
+            alpha, x, y, scaleX, scaleY, filtry, visible, opacity, rotation, 
+            mouseEnabled, mouseX, mouseY
+            name, parent, hitArea
+        metody:
+            draw - vykreslení vektorů
+            getBounds - hranice objektu
+            setTransforms
+            isVisible
+            globalToLocal, localToGlobal
+        události
+            události myši
+
+        Container
+        - typ objektu obsahující další objekty - vizuální list
+        - parent - hlavní / nadřzený objekt
+        - child - vnitřní objekt
+        metody:
+            addChild
+            removeChild
+            getChildAt - najdi potomka na pozici č. 
+            getChildByName - najdi potomka se jménem...
+        vlastnosti:
+            children - seznam všech potomků
+            numChildren - počet potomků 
+            mouseChildren - interakce myši s vnitřními objekty
+
+        > MovieClip
+
+
+    
+</body>

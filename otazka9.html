@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    9: Práce s obrázky v Adobe Animate, HTML a JS
+
+    Adobe Animate:
+        Pracuje s vektorovou grafikou
+            > Ukládání jako mat. souřadnice (alpha, x, y, height, width)
+            Tah + výplň
+            Stopa štětce
+            Nástroje: Pero, štětec klasický + plynulý, tužka
+            Můžeme ji převést na bitmapu
+            Můžeme importovat z Adobe Illustratoru (.ai, .svg)
+
+        Bitmapová grafika - jako textury
+            - po importu se stává třídou typu Bitmapa - uloží se pod názvem souboru do knihovny
+            - nemá animaci
+            - nemá jméno instance > nemůžeme ji ovládat pomocí skriptu
+            - můžeme ji vektorizovat
+
+    > Komponenty v Adobe Animate
+        Okno > Komponenty > Uživatelské rozhraní > Image
+        > Parametry komponenty > Zdroj - načteme obrázek
+        Vloží externí obrázek při exportu do naší aplikace a změní jeho velikost podle komponenty
+
+Obrázky v HTML
+https://www.w3schools.com/tags/tag_img.asp
+    <img> - nepárový tag / element
+    - načte obrázek v plné velikosti
+    - načte formáty: jpg, png, gif, svg, ico, apng 
+    <img src="umístění obrázku" alt="alternativní text">
+
+    Vlastnosti:
+        alt = popis obrázku, pro lidi se zrakovým omezením, pro to, když se obrázek nenačte, 
+            pro čtečky bez obrázku, pro SEO (search engine optimization)
+        src = umístění obrázku
+            adresa obrázku i s koncovkou
+            relativní adresa 
+                obrazek.jpg - ve stejné složce
+                galerie/obrazek.jpg - ve vnořené složce
+                ../obrazek.jpg - v nadřazené složce
+            absolutní adresa
+                http://www.mujweb.cz/galerie/obrazek.jpg - musí mít i http/https
+        width, height = velikost v pixelech
+        title - název obrázku po najetí myši 
+
+Obrázky v CSS:
+    img {
+         width - px, %, vw, auto, inherit
+         height - px, %, vh, auto, inherit
+         border - rámeček, styl, tloušťka, barvu
+         border-radius - zaoblení rohů
+         opacity - průhlednost
+         filter - grayscale, contrast...
+         transform - zvětšení, rotace...
+    }
+
+Obrázky v JS
+    Ovládáme přes ID
+    Můžeme měnit CSS a html Vlastnosti
+
+    document.getElementById("nazev").vlastnost = hodnota;  
+    document.getElementById("nazev").style.cssvlastnost = hodnota;
+
+    Např.
+    document.getElementById("nazev").src = "obrazek.jpg";
+
+    Můžeme měnit: zdroj, velikost, viditelnost, rámečky, styly apod.
+    Můžeme využívat pro galerie, lightbox, slider, carousel...
+
+
+
+     
+</body>
