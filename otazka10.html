@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    10: Práce se zvukem v Adobe Animate, HTML a JS
+    
+    Adobe Animate
+    - mp3 - 44.1 kHz - 192kb/s
+    - převod do správného formátu pomocí Adobe Encoderu
+
+    Zvuk na časové ose
+        Efekty hlasitosti obou kanálů
+
+    Synchronizace zvuku
+        Stream - kopíruje chování snímků na časové ose
+        Událost - spustí zvuk na prvním snímku, dál ignoruje čaosovou osu
+
+    Opakování
+        Smyčka
+        Opakovat
+
+Skriptování zvuku v Animatu:
+Knihovna CreateJS - SoundJS
+    https://createjs.com/soundjs
+
+    Třída Sound
+    https://createjs.com/docs/soundjs/modules/SoundJS.html
+    - ovládá všechny zvuky najednou
+    - pracuje s externími zvuky
+
+    HTML AUDIO
+    https://www.w3schools.com/html/html5_audio.asp
+    - přehrává zvuky mp3, wav a ogg
+
+    - uvnitř elementu audio je potřeba určit zdroj
+    - prohlížeč přehraje první zdroj, pokud nefunguje, přehraje druhý atd...
+
+    <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio> 
+
+    controls - ovládání přehravače
+    Pokud nemáme controls, zvuk je neviditelný
+    - přehravač v elementu audio můžeme měnit pomocí css
+    autoplay - automatické přehrávání zvuku po načtení 
+      (může zablokovat prohlížeč, musíme spustit po kliknutí na nějaký prvek)
+    mute - ztišení zvuku
+    loop - zacyklení zvuku
+    src - zdroj zvuku 
+
+JavaScript a Audio
+https://www.w3schools.com/tags/ref_av_dom.asp
+
+Využívá komponentu HTML Audio
+
+Můžeme HTML komponentu vytvořit pomocí JS:
+      var zvuk = document.createElement("AUDIO");
+
+Můžeme vytvořit jen třídu Audio:
+
+      var zvuk = new Audio("zvuk.mp3");
+      zvuk.play();
+      zvuk.pause(); - zastaví audio na pozici
+      zvuk.load(); - načte zvuk
+
+    Vlastnosti:
+      autoplay - boolean
+      muted - boolean
+      loop - boolean
+      ended - boolean
+      audioTracks - seznam skladeb
+      textTracks - seznam titulků
+      src 
+      volume
+
+    Události:
+      play
+      pause
+      ended
+      playing
+      volumechange
+
+
+
+
+</body>

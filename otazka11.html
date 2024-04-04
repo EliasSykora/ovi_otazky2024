@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="otazka3.js"></script>
+</head>
+<body>
+    11: Práce s videem v Adobe Animate, HTML a JS
+
+    Adobe Animate
+    - formát mp4
+    - převod v Adobe Encoder - H.264
+
+    v createjs - komponenta Video
+    - vloží html element do projektu
+    - video se zobrazí po exportu scény
+    - nemůžeme ji jednoduše ovládat skriptem v Animatu
+    - musíme využít jQuery přes id
+
+
+    Video v HTML
+
+    https://www.w3schools.com/tags/tag_video.asp
+
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video> 
+
+    - formáty: mp4, ogg, webM
+    vlastnosti:
+        controls
+        autoplay - funguje jen s muted (zákaz automatického spouštění zvuku)
+        muted
+        height
+        width
+        poster - obrázek před spuštěním videa
+        src
+
+    Video v JS:
+    https://www.w3schools.com/tags/ref_av_dom.asp
+
+    Vlastnosti:
+    autoplay - boolean
+    muted - boolean
+    loop - boolean
+    ended - boolean
+    textTracks - seznam titulků
+    src 
+    volume
+    seeking
+    currentTime
+
+  Události:
+    play
+    pause
+    ended
+    playing
+    volumechange
+
+Pravidla umisťování videa na web:
+- musíme si hlídat velikosti videa
+    > pomalé načítání
+    > zabírání místa na webu
+- komprimace videa (Adobe Media Encoder)
+    - na vlastní server - zachování autorských práv
+    -> pomalejší načítání, hodně místa
+
+Video na sociálních sítích
+ - pomocí videokomponenty - můžeme umístit k nám na web
+    - autorská práva, komprese 
+
+- výhody - upozornění subscriberů
+    
+
+</body>
