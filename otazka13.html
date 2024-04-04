@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+   Otázka 13: HTML elementy. (základní kostra HTML stránky, atributy).
+
+    HTML = hyper text markup language
+
+    Slouží k tvorbě webových stránek včetně grafických prvků.
+
+    Pro zobrazení html slouží webový prohlížeč
+    např. Chrome, Mozilla Firefox, Opera, Edge, Safari, DuckDuckGo
+
+    Informace o html: 
+    https://www.w3.org/
+    https://www.w3schools.com/
+    https://www.jakpsatweb.cz/
+
+    Editory html:
+    - Jakýkoliv textový program
+    - Visual Studio
+    - Poznámkový blok
+    - Adobe Dreamweaver
+
+    elementy = tagy, html značky
+    Prvky zakončené  < >
+
+    Dělíme je na:
+
+    Párové (paired)
+    <element> </element>
+
+    Nepárové (unpaired)
+    <element> 
+
+    Další rozdělení:
+
+    Strukturní
+     např: header, main, section, img
+
+    Formátovací
+     např.  h1, b, i, span
+    
+    Elementy mohou obsahovat atributy = vlastnosti
+    <element vlastnost="hodnota"></element>
+    Elementy mohou mít různé vlastnosti
+    Např.
+        width="500"   - img px
+        style=" css styly " - jakýkoliv element
+        src="obrazek.jpg" - zdroj obrázku, skriptu, stylu
+        charset="utf-8" - sada znaků
+    
+    Elementy uvnitř elementů = vnořené elementy (nested)
+
+    Příklady html:
+
+    <!DOCTYPE html> začátek html; verze html a dalšího jazyka, odkaz na manuál
+    <html>
+        <head> hlavička - nastavení, neviditelné informace
+            <meta charset="utf-8"> Česká sada znaků
+            <title> Název stránky </title> Slouží pro vyhledavače a je na liště prohlížeče
+            <link rel="stylesheet" type="text/css" href="style.css"> Styly
+            <link rel="icon" type="image/png" href="favicona.png"> favicona na liště prohlížeče nebo ve vyhledavači
+            <script src="script.js"></script> JS scripty
+            <style>  </style> styly pro tuto jednu stránku
+        </head>
+        <body> tělo stránky - samotný obsah stránky
+
+            Elementy rozdělující strukturu:
+            Tyto elementy mají stejné vlastnosti (speciální jména pro jednodušší zápis css)
+            <header> </header>
+            <nav> </nav>
+            <main> </main>
+            <aside> </aside>
+            <section> </section>
+            <article> </article>
+            <footer> </footer>
+            <div> </div> division
+
+            Elementy pro úpravu textu:
+
+            Nadpisy - velikost h1 - h6
+
+            <h1> Největší nadpis </h1>
+            <h2> Největší nadpis </h2>...
+            <h6> Nejmenší nadpis </h6>
+
+            <p> Odstavec - paragraf -nechává mezeru před a za </p>
+
+            <br> break - zalomení řádku bez mezery
+            Text mimo odstavce = tzv. volný text
+
+            Styly textu:
+
+            <b> bold = tučné písmo </b>
+            <i> italic = kurzíva </i>
+            <u> underlined = podtržené písmo </u>
+            <del> deleted = přeškrtnuté písmo </del>
+            <small> malé písmo </small>
+            <mark> zvýrazněné písmo </mark>
+            <span> rozsah textu </span> nedává vzhled, používáme spolu s css
+            <pre> předformátovaný text - zachovává mezery a řádky </pre>
+            <code> počítačový text - jiný font </code>
+            <q> citace = quotation, citace s uvozovkami </q>
+
+            Tabulka
+            <table>
+                <tr> řádek tabulky 
+                    <th>
+                        Záhlaví tabulky
+                    </th>
+                    <th>
+                        Záhlaví tabulky
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Normální buňka tabulky 
+                    </td>
+                    <td>
+                        Normální buňka tabulky 
+                    </td>
+                </tr>
+            </table>
+        
+
+        Seznamy:
+
+        nečíslovaný seznam - unordered list
+        položky mohou začínat pomlčkou, kolečkem, čtverečkem...
+        <ul>
+            <li> list item = položka seznamu </li>    
+        </ul>
+
+        číslovaný seznam - ordered list
+        mohou začínat číslem, písmenem abecedy apod.
+        <ol>
+            <li> list item = položka seznamu </li>    
+        </ol>
+
+        Odkaz = anchor
+        Vždy obaluje nějaký text, obrázek, div, nemůže být bez vnitřního obsahu
+        <a href="adresa odkazu" target="cíl odkazu">  Další element  </a>
+
+        Adresa odkazu:
+            relativní - odkazuje na soubor na stejném webu
+                obrazek.jpg, index.html, galerie/obrazek.jpg, ../menu.html
+            absolutní - celý odkaz i s protokolem http
+                https://docs.unity3d.com/
+            mailový odkaz - rovnou otevře mailového klienta
+                mailto: email@poskytovatel.cz
+            odkazová kotva - odkaz na sekci na stránce
+                #jmenoID
+        Cíl odkazu:
+            Okno v kterém se odkaz otevře
+                _self - automaticky, stejné okno
+                _blank - nové prázdné okno
+                _parent - nadřazené okno (např. v google mapách to přepíše okno s mapou)
+    
+    obrázky = image
+        <img src="zdrojobrazku.jpg" height="500" width="auto" alt="alternativní text">
+
+    Button = tlačítko
+        <button> Text tlačítka </button>
+    
+    Další
+        <hr> horizontální linka
+
+
+
+
+        </body>
+
+    </html> konec html
+        
+        
+
+
+
+
+</body>

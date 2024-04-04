@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+    <h1> Tvorba webu. (hosting, domény, http, ftp, ip adresa, zásady webdesignu, optimalizace).</h1>
+
+    internet = celosvětová síť propojených komunikačních zařízení
+
+    intranet = vnitřní/lokální síť používající stejné technologie jako internet
+    (kabel, wifi a další, např. školní síť)
+
+    ethernet = kabelová lokální síť (LAN) (např. stolní počítače v učebnách)
+
+    IP adresa = internet protocol adress
+    - každé zařízení připojené k síti má svoji adresu
+    IPv4 - čtyři číslice oddělená .
+    IPv6 - bloky číslic a písmen oddělené :: 
+
+    VPN - vitrual private network 
+    - slouží (mimo jiné) k maskování IP adresy
+    - vypadá jako by uživatel byl připojený z jiného místa
+    
+    server = úložiště dat
+    hosting = poskytování prostoru na serveru
+    - roční poplatky (690 - 1700 Kč)
+    - různé parametry - prostor pro ukládání dat, rychlost přenosu, poskytování databáze - speciální server pro redakční systémy, mailhosting, alias - víc domén na hostingu, traffic - množství přenesených dat za měsíc, php verze databáze 
+    - čeští poskytovatelé, např: Wedos, Aktiv24, forpsi, Savana, Endora...
+
+    doména = zástupné jméno webové stránky
+    - registrovaná u poskytovatele domény, odkazuje na hosting (DNS adresu)
+    - registrujeme ji přes registrátora, který za nás jedná s poskytovatelem
+    -> registrátor může poskytovat i hosting 
+    - roční poplatky (120 - 600 kč)
+
+    - doména je zapsaná v seznamu registrátora
+    - doména 1. řádu = vlastní poskytovatel domény
+        .cz, .com, .org, .biz, .net
+     Správce domény cz  je Nic.cz https://www.nic.cz/
+    - doména 2. řádu = můžeme si koupit
+        hollarka.cz, seznam.cz, google.com
+        Platí se ročně
+        U registrátora necháme zapsat náš kontakt. 
+        Na hostingu se nachází ve složce "www"
+    - doména 3. řádu = patří k doméně 2. řádu, nemusíme je kupovat
+        Symbolizuje složky na serveru domény 2. řádu
+        blogspot, tumblr, deviantart - složka v jejich systému
+        Např.
+        fonts.google.com, mail.google.com, mapy.seznam.cz
+
+    http - hyper text transfer protokol
+        - Přenosu textových dat - pro webové prohlížeče na 
+        čtení webových stránek
+    https - hyper text transfer protokol secure
+        - služba navíc k hostingu, začíná být braná jako standart
+        zabezpečení proti úniku dat
+        - většina hostingů poskytuje zdarma
+        - některé prohlížeče blokují stránky bez https
+    ftp - file transfer protocol
+        - přenosu souborů na server 
+        - nahrávání webových stránek na server pomocí ftp klienta (např. WinSCP, FileZilla, CyberDucky, TotalCommander)
+
+    Zásady webdesignu
+    Technické:
+        W3C (world wide web consortium)
+            Vytváří stantardy tvorby webových stránek
+            Publikuje verze html
+            Vytvořili pravidla přístupnosti webových stránek, 
+            určují fungování html, css, tak aby fungovali na všech zařízeních
+            Určují vývoj technologie do budoucna
+            Konference, workshopy, návody (W3schools)
+        
+        W3C Acessibility Standards Overview
+            Pravidla, která by vývojáři měli dodržovat
+        
+        Pravidla obsahují
+            Zobrazitelnost na různých zařízeních
+            Aktuální technologie
+            Přístupnost pro lidi se zrakovým handicapem
+            Bezpečnost stránek pro lidi s epilepsií
+            Optimalizace odkazů
+            Minimalizace dat
+
+        Validátor webových stránek
+        https://validator.w3.org
+
+        Optimalizace webových stránek
+        - přizpůsobení webu pro jednotlivá zařízení a webové prohlížeče
+        Při optimalizaci musíme brát ohled na:
+            Typ prohlížeče a jeho verze
+            Rozlišení webové stránky vs. Rozlišení monitoru/zařízení
+            Pluginy (webová unity, aplikace, přehravače, zobrazení 3D)
+            Skripty a styly (js, html5, jquery, css)
+
+        Problematické prvky webu
+            Pluginy (unity, aplikace - rozměry, rychlost)
+            Multimedia (zvuky, video - velikost, rozlišení, délka stahování)
+            Statická velikost webu (velikost webu v px)
+            Framy - vnořené rámce (mapy, video z youtube)
+            Velké nezmenšené obrázky (v náhledech)
+
+        Optimalizace vzhledu
+            Responzivita - přizpůsobení vzhledu podle šířky okna
+            Tvorba mobilní verze webu
+            Nepoužívat obrázky a videa větší než je nutné 
+            Používání vektorových obrázků SVG
+
+        SEO - search engine optimization
+        Optimalizace vyhledávání
+        Jedna z nejdůležitějších věcí pro úspěšné fungování webu
+
+        On page faktory
+            Title - název stránky v headu
+            Opakování klíčových slov v html
+            meta tag description - alt, popisky obrázků a další 
+            struktura url/ webových souborů 
+            Text odkazů na stránce
+            Navigace stránek <nav></nav>
+
+        Off page faktory
+            Počet zpětných odkazů 
+            Recenze
+
+
+
+
+</body>
