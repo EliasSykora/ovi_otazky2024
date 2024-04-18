@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+Otázka 14: CSS - Selektory, vlastnosti, animace
+
+CSS - Cascading style sheets - kaskádové styly
+Jazyk pro úpravu html objektů
+Vytváří: Vzhled, vlastnosti - vizuální a interakce mezi objekty, 
+umí vytvářet obsah (v rozsahu znaků)
+
+Umístění na tyto 3 místa:
+    - inline - přímo do html do vlastnosti style
+            <div style="vlastnost:hodnota; vlastnost:hodnota"> </div>
+            Nepřehlednost, špatná tvorba změn
+            Hodí: Bloky v redakčním systému, části kódu embed, které se vloží do stránky
+            např. Google mapy, Youtube Vimeo
+    - interně - do headu do tagu / elementu style
+            Platí jen pro 1 html stránku
+            Hodí se pro individuální úpravy v rámci jedné stránky
+            V headu:
+            <style>
+                selector {
+                    vlastnost: hodnota;
+                }
+            </style>
+    - do externího souboru .css
+            V headu je link na stylesheet, který můžeme aplikovat na více stránek současně
+            <link rel="styleheet" type="text/css" href="style.css">
+            Nejpřehlednější, můžeme upravovat více stránek najednou
+            Musíme si hlídat, aby se neopakovaly názvy ID
+            Můžeme používat několik externích stylesheetů současně
+              - basic stylesheet - barva pozadí, fonty, header
+              - galerie / interaktivní část - jak se chovají obrázky, interaktivní prvky
+
+    Selektor:
+            - označení ovládaného elementu 
+            (používá je i JQuery)
+
+            Výpis selektorů: https://www.w3schools.com/css/css_selectors.asp
+
+            Základní selektory:     
+
+            (nic)názevElementu - vybere všechny elementy tohoto typu (např. button, header, main)
+            .nazevTridy - vybere všechny elementy s classs="nazevTridy"
+            #nazevId - vybere jeden objekt s id="nazevId"
+
+            Univerzální selektor:
+
+            *  vybere všechny elementy na stránce
+            Používá se to u řešení problémů s paddingem:
+            * {
+                box-sizing: border-box; - nastaví výpočet šířky včetně paddingu
+            }
+
+            Skupinové selektory
+            Vybírají více objektů najednou
+
+            selektor1, selektor2, selektor3 {   }
+
+
+            Kombinátory
+            Vybírají vlastnosti podle vztahů
+
+                Potomek
+                Objekt uvnitř nadřazeného
+
+                vnejsiSelektor vnitniSelektor {    }
+
+                main a  {   }    - všechny odkazy v mainu
+                article div {  }  - všechny divy uvnitř artiklu na všech úrovních viz níž.
+
+                <article>
+                    <div>   
+                        <div></div>    
+                    </div>
+                </article>
+
+                Přímý potomek
+                
+                selektor1 > selektor2 {  }  - označí jen potomka na nejvyšší úrovni
+            
+        Pseudotřídy
+        Elementy ovládané myší nebo klávesnicí
+        Poznáme je podle :
+
+        :hover - najetí myši
+        :active - nakliknutý objekt
+        :visited - navštívený odkaz
+
+        Pseudoelementy
+        Označují části objektů
+        Poznáme je podle ::
+
+        selektor::typ
+
+        p::first-letter - první písmeno odstavce
+
+        Vkládání drobného obsahu:
+
+        h1::before {   
+            content: text;
+        }
+
+        h1::after {
+            content: text;
+        }
+
+        Selektory podle vlastností
+
+        selektor[vlastnost=hodnota] 
+
+        a[target="_blank"] - vybere všechny odkazy do nového okna
+
+
+Vlastnosti CSS:
+    https://www.w3schools.com/cssref/index.php
+
+    vlastnost: hodnota; 
+
+    Pro objekt s 4 hranami:
+    margin: 10px;  - všechny 4 hrany současně
+    margin: 10px 5px; - nastaví současně horní + dolní, pravou + levou
+    margin: 10px 5px 20px 5px; - každou zvlášť
+    margin-top: 20px;  - jen jednu
+
+    Vlastnost s procentuálními hodnotami
+    filter: opacity(1);  
+    1 = 100%
+    0.5 = 50%
+
+
+    Jednotky
+    px - obrazové body/ pixely
+    % - procenta velikosti nadřazeného objektu
+    vw, vh - procenta velikosti okna
+    em - základní jednotka fontu, přizpůsobuje se přiblížení v systému
+
+
+    Co umí CSS nastavit
+        width
+        height
+        opacity
+        font-weight
+        font-family
+        font-decoration
+        color - barva textu
+        background
+        background-color
+        background-image
+        background-position
+        display: block, flex, grid, inline, none
+        position: static, relative, absolute, fixed, sticky
+        trasform
+        transition
+        padding
+
+    CSS animace
+        
+    Tvorba animace:
+
+    @keyframes nazev {
+        from { vlastnost:hodnota;  }
+        to { vlastnost:hodnota;  }
+    }
+
+    @keyframes nazev {
+        0% { vlastnost:hodnota;  }
+        50% { vlastnost:hodnota;  }
+        100% { vlastnost:hodnota;  }
+    }
+
+    Detaily se nastaví v objektu:
+
+    animation: nazevAnimace trvani opakovani;
+    animation: jump 1s loop;
+  
+</body>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+Otázka 15: HTML a CSS layout
+
+Základní prvky
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="favicon" type="png/icon" href="favicon.png">
+    <script src="script.js"></script>
+    <style></style>
+</head>
+<body>
+
+</body>
+</html>
+
+head - nastavení stránky, technické údaje, styly, skripty, favicona
+metacharset - sada znaků 
+title - název objevující se v liště prohlížeče nebo ve vyhledavačích
+link - slouží k připojení souborů stylesheety, fonty, favicona...
+script - zápis JS
+style - zápis css interní
+
+<body>
+    <header> </header>
+    <nav> </nav>
+    <aside> </aside>
+    <main> </main>
+    <article> </article>
+    <section> </section>
+    <footer> </footer>
+</body>
+
+header = záhlaví
+    logo, název stránky, hlavní nadpis, podtitulek
+nav = navigace
+    menu s odkazy
+    může být vytvořené pomocí
+        tlačítka  <button> </button>
+        seznam <ul> <li> </li> </ul> display: inline-blocks
+        div <div> </div>  display: flex, flex-direction: row / flex-direction: column 
+aside = boční panel
+    přihlášení, reklamy
+main = hlavní obsah
+    obsahuje další sekce
+article = článek
+
+section = sekce
+
+footer = zápatí
+    copyright, další navigace, mail na admina
+
+Responzivní webdesign
+
+    responzivita - schopnost webu přizpůsobit svoje rozměry dostupnému místu
+    např. na pc podle velikosti okna + změna rozložení a velikosti na mobilu
+    Nemá statické rozměry = nic není napsané v px
+    Rozměry v % - procenta velikosti nadřazeného objektu
+                - fungují jen pokud má nadřazený objekt nastavenou velikost
+                - pozor - procenta v navazujících objektech mohou fungovat problematicky
+            v vw a vh - podle velikosti okna zařízení
+            v em - podle velikosti základního textu
+                 - používáme většinou pro padding, margin
+
+    K rozlišení pravidel css podle šířky zobrazení slouží @media 
+    (screen = všechna zobrazovací zařízení / print = tisk)
+
+    body {
+        background: "red";
+    }
+
+    @media only screen and (max-width: 600px) {
+        selector {
+            vlastnost: hodnota
+        }
+
+        body {
+            background: "blue";
+        }
+    }
+
+    Platí jen při šířce okna pod 600px (se nastaví pozadí na modré);
+
+
+Přizpůsobení velikosti pro responzivitu
+
+    Podle zařízení přizpůsobujeme:
+        Velikost obrázků a poměr jejich stran 
+        Počet sloupců obsahu
+        Počet zobrazených položek v menu
+        Zobrazení menu vertikálně / horizontálně
+        Velikost textu
+        Nadpisy v procentech nebo em (NE px)
+    
+    Rozměry jsou v procentech (vh, vw)
+    s hranicí min nebo max rozměrů
+
+    Display: flex
+    Display: grid
+
+    Zobrazení prvků přizpůsobující se kontejneru
+    Změna řazení
+    Roztahuje objekty 
+
+    Guide to flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+    Guide to grid: https://css-tricks.com/snippets/css/complete-guide-grid/
+
+Příklady layoutu:
+    Carousel
+    Accordeon
+    Infinity page
+    Slider
+    Modal
+    
+
+
+</body>
+</html>
