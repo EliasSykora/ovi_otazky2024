@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+Otázka 16: Javascript (syntax, základní objekty)
+
+Reference:
+https://www.w3schools.com/jsref/default.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+https://www.jakpsatweb.cz/javascript/
+
+Objektově orientovaný jazyk
+    - pracuje s objekty = instace a vzory = třídami
+    - pracuje s událostmi - např. Myši, klávesnice, vlastní události
+Interpretovaný jazyk - potřebuje interpreta (např. webový prohlížeč, čtečka pdf apod.)
+
+Použití:
+    -> webové stránky
+    -> interaktivní aplikace
+    -> sazba textu v InD
+    -> tvorba serverových aplikací s databázemi
+
+Vznikl
+    1995, tvůrce Brendan Eich
+
+Aktuální verze
+    ECMAScript 2023
+
+Ovlivnil jazyky:
+    ActionScript, TypeScript, Node.js
+
+Charakteristika:
+- třídy + instance
+- dědičnost - třídy mohou vycházet z tzv. rodiče (předcházející třída) a tito potomci umí vše, co rodiče + přidávají funkce a vlastnosti navíc
+- nemá Runtime (vlastní spouštěcí skript) - potřebujeme webový prohlížeč pro spuštění
+- využíváme s HTML + CSS
+- dokáže generovat HTML + CSS
+- uživatel ho může v prohlížeči zakázat 
+    -> musíme web připravit tak, aby fungoval i bez JS 
+- nedokáže přistupovat k souborům v PC
+- nezná elementy, které jsou napsané později v sekvenci HTML
+    -> pokud používáme objekty z body v našich skriptech, musíme funkce, které je používájí zdržet/spustit až po načtení obsahu body např. pomocí jQuery (document.ready), nebo v js (window.onload)
+např.
+    <script>
+        function init(){
+
+        }
+   </script> 
+   <body onload="init()"></body>
+
+Syntax
+    - rozlišování velkých a malých písmen
+    - nemusíme na konci řádku psát ; pro ukočení příkazu, stačí odentrovat řádek
+    
+    - ovládání objektů - ovládáme skrz jméno instance + tečku + název funkce/vlastnosti
+    tlacitko.addEventListener....
+
+    - zachytávání událostí - skrz posluchače události
+        v html elementu
+        -> on+název události
+        <button onclick="jmenofunkce()">Název tlačítka</button>
+        ve skriptu - přidáváme přes addEventListener
+        tlacitko.addEventListener("click", nazevFunkce);
+   - Cíle události
+        target - nejnižší cíl události (jedno z tlačítek v navigaci)
+        currentTarget - nejvyšší cíl události (body, navigace)
+        this - toto označení je relativní podle pozice v kódu
+             - this na scéně, nebo ve skriptu = celá scéna / dokument
+             - this ve funkci = tato funkce
+             - nejlepší je pro nás "this" si uložit do proměnné s konkétní cestou a pak využívat
+             v dalších funkcích
+
+    Tvorba funkcí = deklarace
+    
+        function nazevFunkce (parametr) {
+
+        }
+
+    Proměnné
+        - nemusíme určovat typy proměnných
+        deklarace proměnné:
+        var nazevPromenne; 
+        - dochází k automatickému "přetypování" proměnných
+        - může být problém u čísel a textu
+        Pokud chceme převést proměnnou na jiný typ (a nestane se to automaticky), musíme použít
+        variable conversion (přetypování proměnné)
+        např. 
+        (10).toString()
+        Number("200")
+
+
+    Příkazy v HTML:
+    > příkazy pro HTML dokument prohlížeč automaticky umí
+
+    Výpis z konzole:
+        console.log("text")
+    
+    Dialogové okno
+        alert("Upozornění")
+    Dialogové okno vyžadující vstup uživatele (String)
+        prompt("Napište rok narození")
+    Dialogové okno s alternativou ( ano/ne)
+        confirm("Bylo vám již 18 let?")
+    
+    Tvorba obsahu:
+        write("Obsah textu") - přidá text na konec prvku, který příkaz dostal
+        innerHTML = " html kód " - změní vnitřní html objektu
+
+        createElement("název tagu") - vytvoří nový element
+        appendChild(element) - přidá potomka objektu
+    
+    příklad:
+        var popisek = document.createElement("p");
+        popisek.innerHTML = "Tohle je nový text"
+        document.getElementById("main").appendChild(popisek);
+
+Události JS
+        click
+        dblclick
+        mouseenter
+        mouseleave
+        mouseover
+        mouseout
+        focus
+        keyup
+        keydown
+        keypress
+        change
+
+Zápis JS:
+        - do tagu script
+        <script> Tady se píše script </script>
+        - externě
+             do souboru .js
+             <script src="script.js"></script>
+        - do tagu elementu
+            <button onclick="document.alert('Ahahahahahahaha')"> Klik </button>
+
+Základní objekty JS
+
+        document = oznařuje html dokument
+        https://www.w3schools.com/js/js_htmldom_document.asp
+            document.cookie - obsahuje všechny cookies, které patří ke stránce
+            document.characterSet - meta charset
+            document.type
+            document.body
+            document.head
+            document.open()
+            document.close()
+
+
+        window = okno prohlížeče
+            window.open()
+            window.close()
+            window.resizeTo()
+            window.print()
+            window.location = adresa otevřeného dokumentu
+            window.history = umožňuje pohybovat se v historii
+            window.navigator = informace o prohlížeči
+            window.screen = monitor
+            
+
+    
+
+</body>

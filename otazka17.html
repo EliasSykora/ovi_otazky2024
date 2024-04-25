@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+Otázka 17: Knihovny JS (JQuery, populární knihovny JS)
+
+JavaScript = objektově orientovaný, interpretovaný jazyk
+-> pracuje s třídami a instancemi
+    - instance ovládá pomocí jména instance
+    - u html elementů nastavíme jméno pomocí id 
+    <button id="nazevInstance"></button>
+    - interpretovaný - potřebuje prohlížeč
+    - není samostatně stojící - potřebuje k sobě např. html + css
+
+Umístění JS a přidání knihoven
+-> knihovny js = soubory .js připojené externě
+<script src="knihovna.js"> Tenhle vnitřek se přeskakuje pokud napíšeme src </script>
+<script> Až sem můžeme psát vlastní skripty, co využívají knihovnu </script>
+
+KNIHOVNA Js
+- soubor s koncovkou .js
+- prohlížeč ji načte přes tag script
+- JS a html se vykonávají podle sekvence kódu (po řádcích)
+-> nejdřív musíme knihovnu importovat, až po tom používat
+-> není to samostatný jazyk, můžeme ho kombinovat s čistým javascriptem, nebo dalšími knihovnami
+    -> pokud kombinujeme více věcí, musíme si hlídat názvy proměnných a funkci
+    -> pokud by byly stejné, vytvoří to chyby
+    -> např. CreateJS z animatu pojmenovává vše vždy stejně, proto nemohou být 2 projekty v jedné html stránce
+-> poznámky
+    // jednořádková poznámka = inline
+    /* víceřádková poznámka */
+- dokumentace - důležitý dokument pro používání knihovny
+- měla popisovat, co které příkazy dělají
+
+K čemu používají knihovny:
+    Zjednodušení použití JS = ovládání objektů (JQuery - adresování objektů podle CSS)
+    Více možností animace (
+        JQuery - efekty fade, hide, show, slide...
+        Pixi.js
+        Vue.js
+        snapSVG
+         )
+    K tvorbě komponent a bloků (např. Bootstrap - a jeho prvky)
+    Grafické vizualizace ( p5.js, p5.play)
+    K zrychlení práce (můžeme využívat cizí kód)
+    k vizualizaci dat (vykreslování grafů, map, tabulek)
+    k práci s fonty 
+    matematické úlohy
+    tvorba UI (user interface)
+    vizualizaci 3D objektů (three.js)
+    Manipulace s DOM (document object reference) a BOM (browser object reference) ovládání dokumentu, okna prohlížeče 
+
+Knihovna JS vs. Framework JS
+    - knihovna - externí soubor.js - můžeme s ním upravovat naše existující data, zakomponovat ho do svého designu webu
+    - framework - vzor webu, do kterého dosazujeme naše data 
+         Angular
+         React
+         Aurelia
+         Vue.js
+         Node.js
+
+Nejznámější knihovny
+
+    JQuery
+        - https://jquery.com/download/
+        - zjednodušení funkcí 
+        - zjednodušení posluchačů 
+        - ovládání pomocí CSS
+        - efekty a animace 
+        - poznáme podle $ a skript začíná  $(document).ready(function(){  })
+        - řeší problém sekvence v html
+
+    CreateJS
+        - https://createjs.com/
+        - používá Adobe Animate pro vytváření HTML5 souborů
+        - napodobuje jazyk ActionScript 2
+        - má MovieClip, Tweeny (doplnění), Stage, DisplayObject
+        - dá se použít i mimo Animate
+        - používá html objekt Canvas
+        - má 4 moduly: EaselJS, TweenJs, SoundJS a PreloadJS
+
+    Bootstrap
+        https://www.w3schools.com/bootstrap5/bootstrap_exercises.php
+        - Knihovna CSS a JS
+        - (poloviční) Framework - určuje skladbu stránek + styly
+        - Nastavujeme chování objektů pomocí CSS
+        - tvorba responzivních webových stránek
+        - zrychluje tvorbu webu
+        - má komponenty carousel, slider, pagination, buttony...
+    
+    P5.js
+        https://p5js.org/
+        - knihovna vycházející s Processingu
+        - používá se k tvorbě vizualizací
+        - používá Canvas
+        - dokáže interaktivně ovládat prvky v Canvasu
+        - výstup umí - mp3, sekvenci png
+        - experimentální tvorba, návrhy
+        - pracuje i se zvukem a videy
+        - má spoustu rozšiřujících knihoven
+
+    p5play.js
+        https://p5play.org/
+        - rozšiřuje p5
+        - slouží k tvorbě her a interaktivních aplikací
+        - používá Canvas
+        - má objekty Sprite (vektorové, statické s bitmapou, animované)
+        - má fyziku objektů, generuje kolize
+
+    snapSVG
+        http://snapsvg.io/
+        - animace SVG
+        - ovládání CSS
+        - interaktivní vektorové animace
+
+    Three.js
+        https://threejs.org/
+        - načítání a vizualizaci 3D objektů
+        - pracuje s obj, stl a jejich texturami
+        - generuje světla, animace, prostředí
+        - interaktivita objektů
+        - vizualizace 3D
+        - 3D hry
+    
+    TypeScript
+        https://www.typescriptlang.org/
+        - práce s textem

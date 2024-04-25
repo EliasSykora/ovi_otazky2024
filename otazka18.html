@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+Otázka 18: Statický vs. Dynamický web (výhody a nevýhody, základní prvky)
+
+Statický web - html + css + js
+    - textový editor (např. Visual Studio, Dream Weaver)
+    - funguje i offline
+    - všichni čtenáři vidí stejnou verzi
+
+Dynamický web - php + xml + html + css + js + databáze
+    - tvoří se jen online
+    - funguje jen online
+    - pro každého uživatele se generuje nově z php skriptů + obsahu databáze
+
+Rozhodnutí jestli statický nebo dynamický web:
+    - Množství času (tvorba, údržba)
+    - Vkládání obsahu - kdo to bude dělat?
+    - Responzivita (mobil / desktop verze, změna rozměrů)
+    - Vzhled
+    - Funkce webu - interaktivita, formuláře, posílání dat...
+    - Jak často cheme změny?
+
+STATICKÝ WEB
+    - html + css + javascript
+    - potřebuje místo k uložení server (poskytuje ho hosting) + doménu
+    - nepotřebuje databázi
+    - tvoří offline pomocí textového editoru ( Visual Studio Code, Poznámkový blok, Adobe Dreamweaver)
+    - funguje offline i online - můžeme si ho stáhnout do počítače
+    - neměnný obsah 
+    - změny - musíme udělat offline a pak nahrát na server pomocí FTP (file transfer protocol)
+    klientem ftp (winWCP, Windows Commander, Total Commander)
+    - musíme dělat změny na pc
+    - skládá se z jednotlivých stránek .html, .css .js
+
+    Výhody
+        Nepotřebuje internet (funguje offline, může být např. jako dokumentace stažené aplikace)
+        Nemusíme je aktualizovat
+        Bude fungovat na většině zařízení
+        Můžeme napsat jakýkoliv kód 
+
+    Nevýhody
+        Autor musí znát html, css, js
+        Všechny úpravy musí probíhat offline a nahrávat přes ftp
+        Ruční úrava grafiky (zmenšení obrázků, oříznutí, optimalizace)
+
+DYNAMICKÝ WEB
+    Tvořený pomocí php, css, js obsah je v html nebo xml
+    Potřebuje databázi pro ukládání textového obsahu
+    Potřebuje hosting pro ukládání zrojových souborů a multimédií
+    Výsledný web se zobrazuje jen online (offline jen php soubory + média)
+    Obsah se tvoří online backendu (administrátorské zázemí)
+    Pro každého návštěvníka se generuje frontend (návštěvnické zobrazení)
+    Umožňuje personalizaci webu pro každého návštěvníka (např. podle jazyku sysému, podle jazyku prohlížeče, podle lokace uživatele, pro přihlášené - oslovení, barevný template, fonty...)
+    Skládá se z mnoha skriptů pro jednotlivé bloky kódu (header, navigace, tlačítka, články...)
+
+    VÝHODY
+        Pohodlnější pro uživatele - bežný uživatel nemusí umět programovat
+        Jenom administrátor musí umět instalacia nastavení
+        Jednoduchá úprava obsahu - jako ve wordu
+        Možnost upravovat z mobilu
+        Jednoduchá tvorba variant webu - jazykové verze, responzibilita
+        Automatická úprava obrázků (ořez, zmenšení, otočení...)
+
+    NEVÝHODY
+        - potřebuje internet (na úpravu i zobrazení)
+        - napadnutelné spamem (přes komentáře, přes online administraci, přes uživatelské účty)
+        - musí se pravidelně aktualizovat
+        - musí se hlídat kompatibilita systému a pluginů a templatů 
+        - některý obsah může být automaticky zakázaný (javascript)
+        - omezené nahrávání souborů (typy, velikost)
+        - vzhled omezuje šablona - rozložení a funkce bloků, umístění prvků
+        - omezené možnosti pluginů - musí dělat programátor
+
+    Základní prvky dynamického webu
+
+    databáze - soubor tabulek s textovými daty
+    MySQL - jazyk databáze
+    template - složka na ftp dynamického webu obsahuje php a css soubory + multimédia, určuje vzhled webu, barvy a funkce)
+    uživatelské role - určují viditelnost obsahu a přístupné funkce 
+        (guest/návštěvník, editor, redaktor, admin)
+    plugin - rozšíření funkcí sysému v backendu (např. eshop, fórum, galerie, úprava obrázků, ochrana proti spamu, rozesílání mailů...)
+    widget - doplněk - vizuální prvek frontendu, který umožňuje využívat další funkce webu nebo pluginů (vyhledávání, kalendář, seznam kategorií, zobrazení náhledů....)
