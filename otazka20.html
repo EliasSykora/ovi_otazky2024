@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+Otázka 20: Wordpress (instalace, pluginy, widgety, šablony)
+
+CMS = content management system = systém pro správu obsahu = redakční systém
+
+Jeden z nejpoužívanějších CMS na světě
+
+https://wordpress.com - komerční stránka, hosting + podpora
+https://wordpress.org/ - stránka systému, download, fóra s podporou, přehled pluginů a templatů, hodnocení uživatelů, řešení chyb
+
+- od roku 2003, aktuálně verze 6.5.2
+- správce Wordpress Foundation
+- využívá jazyk php, databázi MySQL
+- k tvorbě obsahu můžeme používat html, css, javascript jen s povolením (v pluginu)
+- může obsahovat videa, zvuky, obrázky
+
+- generalizovaný systém - pomocí pluginů můžeme rozšiřovat funkce
+
+backend = administrátorské rozhraní (nastavení webu, přehledy, instalace apod.)
+frontend = uživatelské rozhraní (aplikace šablony, zobrazení podle různých rolí)
+
+- přihlášení přes adresu:
+    www.nazevwebu.cz/wp-admin/
+    - vstup do backendu = adminstrátorského rozhraní 
+
+Základní instalace obsahuje:
+    Nástěnka - přehled obsahu a novinek na stránce (aktualizace, komentáře, noví uživatelé)
+    Příspěvky = blogové příspěvky (název, autor, kategorie, tagy, datum publikace, poslední úpravy)
+    Statické stránky = neměnné, umístění v menu, nejdou filtrovat (autor, název, datum publikace)
+    Multimédia - obrázky, zvuky, videa (název, autor, přiřazení k článku nebo stránce), úprava multimédií
+    Komenáře - schvalování, mazání 
+    Uživatelé = uživatelské role (guest, návštěvník, editor, redaktor, šéfredaktor, admin)
+    Vzhled = šablony, menu, widgety (doplňky k funkcionalitě webu)
+    Pluginy = rozšíření funkcí, instalace, aktivace
+    Nástroje = import / export obsahu webu, kontrola funkcí
+    Nastavení = základní údaje o webu, adresa, název, titulek, zobrazení homepage, komentářů 
+
+Instalace Wordpressu
+    "instalace jedním kliknutím" - přes hosting, nastavíme jen umístění na našem serveru, přihlašovací jméno a mail
+
+    Ruční instalace
+        zdrojové soubory z webu wordpressu 
+        https://wordpress.org/download/
+        -> nahrajeme na ftp server (rozbalené, ne v zipu)
+        -> prohlížečem jdeme na afresu
+                - potřebujeme znát 
+                    adresu databáze + přihlašovací jméno + heslo
+                    předponu tabulek v databázi
+                    jazyk webu (cz / eng)
+                    jméno admina + heslo
+        -> web to automaticky vygeneruje 
+        -> hotový web nastavujeme přes backend www.nazevwebu.cz/wp-admin/
+
+    Šablony wordpressu
+
+        Dva typy - klasické a blokové
+
+            Klasická
+                - upravuje se v Vzhled + Přizpůsobení šablony
+                - můžeme upravit jen to, co povolil tvůrce šablony
+                - další úpravy jsou možné pomocí CSS
+                - omezený způsob zobrazení a rozložení stránky
+                - nejde jednoduše dělat alternativní vzhled
+
+            Bloková
+                - můžeme upravovat vzhled (téměr) všech prvků webu
+                - vytváříme si vlastní vzory stránek
+                - změna fontů a barev
+                - jednotlivé části - bloky
+                - můžeme měnit vzory všech stránek, záhlaví, postů... aj.
+                
+
+</body>

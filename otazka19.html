@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> OVI 2024</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+Otázka 19: Redakční systém (Populární CMS, PHP databáze, import a export obsahu)
+
+CMS = content management system (česky: systém pro správu obsahu, redakční systém)
+
+Dynamický web = webový systém, z databáze načítá textový obsah, ostatní data načítá ze serveru, z css generuje vzhled webu, z php generuje funkce webu
+pro každého uživatele to prohlížeč skládá zvlášť
+
+Redakční systémy
+- v php jazyku tvoří programátor
+- velké redakční systémy - tvoří programátorské společnosti
+-> zdarma na webu (připlácí se za rozšíření, support, kontrolu, správu)
+-> na míru (např. banky, jízdní řády, sociální sítě, vnitřní systém firem)
+CMS (redakční systém) - vytvoří kostru webu
+šablony - vytváří vzhled systému (z části určuje i funkce webu)
+pluginy - přidávají funkce systému, závisí na šablonách (rezervační systém, e-shop, posílání zpráv, přidávání komentářů, napojení na sociální sítě, sdílení na sítích)
+
+Známé CMS Systémy
+
+Generalizované systémy
+Nemají omezený typ použití, můžeme v nich vytvářet jakýkoliv obsah webu.
+Např. Portfolio, galerie, e-shop, forum, sociální síť, blog...
+Další funkce přidáme přes pluginy
+-> závislost na pluginech a jejich kompatibilitě se systémem, šablonou a dalšími pluginy
+
+Známé systémy:
+
+- Wordpress https://wordpress.org/
+- Drupal https://www.drupal.org/
+- Joomla https://www.joomla.org
+- Concrete 5 https://www.concretecms.com/
+
+Vždy umí:
+    Blog
+    Statické stránky
+    Komentáře
+    Uprava obrázků
+
+Specializované systémy:
+
+    Obchod
+        Magento
+        Opencart
+        Prestashop
+        Shopify
+    
+        Umí:
+            Databáze produktů (fotky, popisy, cena, dph, sklad)
+            Uživatelské rozhraní (nákupní košík, faktury, posílání mailů)
+            Účetnictví (sledování skladu, majetku, základ výpočtu pro daně)
+    
+    Encyklopedie
+        MediaWiki https://www.mediawiki.org/wiki/MediaWiki
+        Dokuwiki https://www.dokuwiki.org/dokuwiki
+
+        Umí:
+            Správa textového obsahu
+            Propojování klíčových slov
+            Používá Markdown pro zápis textu https://www.markdownguide.org/basic-syntax/
+            Propojování s externími zdroji pomocí poznámek
+    
+    Galerie
+        ZenPhoto https://www.zenphoto.org/
+        Piwigo https://piwigo.org/
+
+        Umí:
+            Vytvářet alba
+            Upravovat multimédia (zmenšení, ořez, kontrast, rozostření)
+            Propojení s e-shopem nebo sociální sítí
+            Komentáře, liky, hodnocení
+
+PhP databáze
+Součástí placeného hostingu
+Na jiném serveru než hosting souborů
+Nejde přistoupit přes ftp
+Vstup přes rozhraní phpMyAdmin
+
+Skládá se z textových tabulek
+Každý řádek tabulky má ID
+Php skripty berou informace z tabulek podle propojených id a z toho seskládají obsah webu
+
+Do databáze se dostaneme přes jméno a heslo
+
+Import a export databáze
+- důležité pro zálohování dat a přenos na jiný hosting
+- export databáze do textového souboru pro tabulky (csv, xml, apod)
+- můžeme uložit do počítače a načíst do jiného redakčního systému stejného typu
+
+</body>
